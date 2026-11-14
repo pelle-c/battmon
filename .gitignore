@@ -1,0 +1,6 @@
+.vscode/
+.idea/
+*.elf
+*.bin
+*.map
+Battmon/BattmonConfig.h
