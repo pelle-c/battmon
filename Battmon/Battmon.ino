@@ -413,13 +413,13 @@ void setup() {
   ads4a.setGain(kAdcGain);
   ads48Ready = ads48.begin(kAds48Address, &Wire);
   ads49Ready = ads49.begin(kAds49Address, &Wire);
-  ads4aReady = ads4a.begin(kAds4AAddress, &Wire);
+  ads4aReady = ads4a.begin(kAds4BAddress, &Wire);
   Serial.printf("I2C: SDA=%u, SCL=%u; ADS1015 0x%02X %s, 0x%02X %s, 0x%02X %s\n",
                 kSdaPin, kSclPin, kAds48Address,
                 ads48Ready ? "detected" : "not detected",
                 kAds49Address,
                 ads49Ready ? "detected" : "not detected",
-                kAds4AAddress,
+                kAds4BAddress,
                 ads4aReady ? "detected" : "not detected");
 
   server.on("/", HTTP_GET, handleIndex);
